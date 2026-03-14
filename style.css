@@ -468,20 +468,16 @@ main > section.section-visible {
 .target-columns {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 22px;
   gap: 26px;
 }
 
 #target .split {
   /* Target: 오른쪽 카드 두 개 합이 HERO 왼쪽 패널 정도 느낌 */
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-  gap: 40px; /* 기본 64px보다 줄여서 좌우 간격 자연스럽게 */
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
   gap: 56px; /* 좌측 헤딩과 카드 간 간격 살짝 넓게 */
 }
 
 #target .section-body {
-  max-width: 680px;
   max-width: 760px;
 }
 
