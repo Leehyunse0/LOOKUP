@@ -472,12 +472,12 @@ main > section.section-visible {
 }
 
 #target .split {
-  /* 오른쪽 카드 영역이 전체의 약 2/3 보이도록 비율 조정 */
-  grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
+  /* 오른쪽 카드 영역이 전체의 약 70% 보이도록 비율 조정 */
+  grid-template-columns: minmax(0, 0.6fr) minmax(0, 1.4fr);
 }
 
 #target .section-body {
-  max-width: 900px;
+  max-width: 960px;
 }
 
 .target-card {
