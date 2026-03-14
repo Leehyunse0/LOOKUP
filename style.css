@@ -471,6 +471,10 @@ main > section.section-visible {
   gap: 22px;
 }
 
+#target .section-body {
+  max-width: 640px;
+}
+
 .target-card {
   border-radius: 20px;
   padding: 18px 18px 16px;
