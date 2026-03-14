@@ -3,6 +3,8 @@ const scrollButtons = document.querySelectorAll("[data-scroll-to]");
 const header = document.querySelector(".site-header");
 const sections = document.querySelectorAll("main > section");
 const landingSection = document.querySelector(".landing-logo");
+const logo = document.querySelector(".logo");
+const heroSection = document.querySelector("#hero");
 
 scrollButtons.forEach((button) => {
   button.addEventListener("click", () => {
@@ -31,6 +33,30 @@ scrollButtons.forEach((button) => {
     });
   });
 });
+
+// Logo click → return to HERO / main landing
+if (logo && heroSection) {
+  logo.addEventListener("click", () => {
+    // Show only hero section
+    sections.forEach((section) => {
+      section.classList.remove("section-visible");
+    });
+    heroSection.classList.add("section-visible");
+
+    // Reset nav active state
+    scrollButtons.forEach((btn) => btn.classList.remove("is-active"));
+
+    // Scroll to top of hero (consider header height)
+    const headerOffset = header ? header.getBoundingClientRect().height : 0;
+    const rect = heroSection.getBoundingClientRect();
+    const offsetTop = rect.top + window.scrollY - headerOffset;
+
+    window.scrollTo({
+      top: offsetTop,
+      behavior: "smooth",
+    });
+  });
+}
 
 // Hero tag grid animation
 const tagPills = document.querySelectorAll("[data-tag]");
