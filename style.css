@@ -471,8 +471,13 @@ main > section.section-visible {
   gap: 22px;
 }
 
+#target .split {
+  /* 오른쪽 카드 영역이 전체의 약 2/3 보이도록 비율 조정 */
+  grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
+}
+
 #target .section-body {
-  max-width: 640px;
+  max-width: 900px;
 }
 
 .target-card {
