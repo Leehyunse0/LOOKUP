@@ -372,6 +372,14 @@ main > section.section-visible {
   max-width: 520px;
 }
 
+#target .section-heading {
+  max-width: 520px;
+}
+
+#target h2 {
+  word-break: keep-all;
+}
+
 .section-copy {
   margin: 0;
   color: var(--color-mid);
