@@ -380,6 +380,10 @@ main > section.section-visible {
   word-break: keep-all;
 }
 
+#target h2 .heading-line {
+  white-space: nowrap;
+}
+
 .section-copy {
   margin: 0;
   color: var(--color-mid);
@@ -487,6 +491,11 @@ main > section.section-visible {
 
 #target .section-body {
   max-width: 760px;
+}
+
+#target .target-banner {
+  display: inline-block;
+  margin: 24px auto 0;
 }
 
 .target-card {
